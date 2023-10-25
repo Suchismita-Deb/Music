@@ -1,13 +1,20 @@
 package com.chinook.music.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
+import lombok.*;
 
-@Entity
-@Table(name="playlist")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@EqualsAndHashCode
+@Entity(name = "playlist")
 public class PlaylistEntity {
     @Id
+    @Column(name = "playlistid")
     private Long playlistId;
     private String name;
 }
