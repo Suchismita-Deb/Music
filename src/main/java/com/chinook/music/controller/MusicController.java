@@ -1,7 +1,6 @@
 package com.chinook.music.controller;
 
-import com.chinook.music.entity.PlaylistEntity;
-import com.chinook.music.repository.MusicRepo;
+import com.chinook.music.dto.PlayListDto;
 import com.chinook.music.service.PlaylistService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,8 +22,8 @@ public class MusicController {
     }
 
     @GetMapping("/music")
-    public List<PlaylistEntity> getData(){
-        List<PlaylistEntity> all = playlistService.allPlayList();
+    public List<PlayListDto> getData(){
+        List<PlayListDto> all = playlistService.allPlayList();
         return all;
     }
 }
